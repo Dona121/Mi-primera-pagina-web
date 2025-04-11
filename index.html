@@ -3,39 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visor Power BI</title>
+  <title>Visor Power BI - Página Elaborada</title>
   <style>
-    body {
+    /* Reinicio básico de márgenes y paddings */
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    /* Estilos del body */
+    body {
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       background-color: #f4f4f4;
+      line-height: 1.6;
+      color: #333;
+    }
+    /* Encabezado de la página */
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    /* Menú de navegación */
+    nav {
+      background-color: #34495e;
+      padding: 0.5rem 2rem;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: #bdc3c7;
+    }
+    /* Contenedor principal (main) */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      justify-content: center;
+    }
+    /* Sección del visor Power BI */
+    .powerbi-section {
+      flex: 1 1 50vw; /* Ocupa la mitad del ancho (mínimo) */
+      max-width: 50vw;
+      margin: 1rem;
     }
     .iframe-container {
-      /* La mitad de la pantalla, ajusta según lo requieras */
-      width: 50vw;
-      height: 50vh;
+      width: 100%;
+      height: 50vh; /* Ajusta la altura a la mitad del viewport */
       border: 2px solid #ccc;
-      /* Opcional: para redondear esquinas o agregar sombra */
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background-color: #fff;
+    }
+    /* Sección de información adicional */
+    .info-section {
+      flex: 1 1 40vw;
+      max-width: 40vw;
+      margin: 1rem;
+      padding: 1rem;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2c3e50;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .powerbi-section,
+      .info-section {
+        flex: 1 1 90vw;
+        max-width: 90vw;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Contenedor para el iframe -->
-  <div class="iframe-container">
-    <!-- Se inserta la URL del visor Power BI en el atributo src del iframe -->
-    <iframe 
-      src="https://app.powerbi.com/view?r=eyJrIjoiNzM5YTM0NjktN2I3OS00NjZjLTkzYTUtZmFjOGVhOGUxMmIxIiwidCI6ImRlZDRiNWFjLTMyNWYtNDIxNC05NDM5LTIyZDk4YzAxYjljOCJ9"
-      width="100%" 
-      height="100%" 
-      frameborder="0" 
-      allowFullScreen="true">
-    </iframe>
-  </div>
+  <!-- Encabezado de la página -->
+  <header>
+    <h1>Visor Power BI Integrado</h1>
+    <p>Página elaborada con contenido interactivo y más información</p>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Informes</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
+    <!-- Sección del visor Power BI -->
+    <section class="powerbi-section">
+      <h2 style="text-align:center; margin-bottom: 1rem;">Visor Power BI</h2>
+      <div class="iframe-container">
+        <!-- Inserta la URL del visor Power BI en el atributo src -->
+        <iframe 
+          src="https://app.powerbi.com/view?r=eyJrIjoiNzM5YTM0NjktN2I3OS00NjZjLTkzYTUtZmFjOGVhOGUxMmIxIiwidCI6ImRlZDRiNWFjLTMyNWYtNDIxNC05NDM5LTIyZDk4YzAxYjljOCJ9"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          allowFullScreen="true">
+        </iframe>
+      </div>
+    </section>
+    
+    <!-- Sección de información adicional -->
+    <section class="info-section">
+      <h2>Información Adicional</h2>
+      <p>
+        Esta sección puede contener datos, explicaciones o cualquier otro contenido relevante relacionado
+        con el reporte o análisis que se visualiza en el visor Power BI. Puedes agregar gráficos,
+        comentarios, enlaces a otros recursos o informes adicionales.
+      </p>
+      <p>
+        Asegúrate de mantener la actualización de la información para ofrecer datos precisos y útiles
+        a los usuarios.
+      </p>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer>
+    <p>&copy; 2023 Mi Empresa. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
