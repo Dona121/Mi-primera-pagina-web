@@ -1,151 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listado de Especies Ganaderas en Colombia</title>
-    <!-- Se puede agregar un estilo básico si se desea -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-
-        h1,
-        h2 {
-            color: #2c3e50;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visor Power BI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .iframe-container {
+      /* La mitad de la pantalla, ajusta según lo requieras */
+      width: 50vw;
+      height: 50vh;
+      border: 2px solid #ccc;
+      /* Opcional: para redondear esquinas o agregar sombra */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Título principal de la página -->
-    <h1>Listado de Especies Ganaderas en Colombia</h1>
-
-    <!-- Sección de Bovinos -->
-    <div class="section" id="bovinos">
-        <!-- Título de la sección -->
-        <h2>Bovinos</h2>
-        <!-- Comentario: Los bovinos se crían principalmente para la producción de leche, carne, y otros subproductos como el cuero. -->
-        <ul>
-            <li><strong>Vacas:</strong> Hembras adultas utilizadas para la producción de leche, carne y cuero.</li>
-            <li><strong>Toros:</strong> Machos reproductores, fundamentales para la generación y mejoramiento del hato.
-            </li>
-            <li><strong>Terneros/Novillos:</strong> Animales jóvenes, destinados a la producción de carne o para
-                integrarse al hato.</li>
-        </ul>
-    </div>
-
-    <!-- Sección de Porcinos -->
-    <div class="section" id="porcinos">
-        <!-- Comentario: Los porcinos se crían primordialmente para la producción de carne. -->
-        <h2>Porcinos</h2>
-        <ul>
-            <li><strong>Cerdos:</strong> Animales adultos enfocados en la producción de carne.</li>
-            <li><strong>Lechones:</strong> Animales jóvenes que se crían para lograr la producción porcina.</li>
-        </ul>
-    </div>
-
-    <!-- Sección de Ovinos -->
-    <div class="section" id="ovinos">
-        <!-- Comentario: Los ovinos se crían para obtener carne, lana y en algunos casos leche. -->
-        <h2>Ovinos</h2>
-        <ul>
-            <li><strong>Ovejas:</strong> Hembras adultas utilizadas en la producción de lana, carne y, en algunos casos,
-                leche.</li>
-            <li><strong>Carneros:</strong> Machos reproductores, necesarios para la multiplicación y mantenimiento del
-                rebaño.</li>
-        </ul>
-    </div>
-
-    <!-- Sección de Caprinos -->
-    <div class="section" id="caprinos">
-        <!-- Comentario: Los caprinos se destinan a la producción de carne, leche, y en algunas ocasiones fibra o cuero. -->
-        <h2>Caprinos</h2>
-        <ul>
-            <li><strong>Cabras:</strong> Criadas para la producción de leche, carne y, en algunos casos, para la
-                obtención de fibras y cuero.</li>
-            <li><strong>Cabritos:</strong> Animales jóvenes de cabra, generalmente destinados a la producción de carne.
-            </li>
-        </ul>
-    </div>
-
-    <!-- Sección de Equinos -->
-    <div class="section" id="equinos">
-        <!-- Comentario: Los equinos en algunos contextos se consideran ganaderos, siendo usados para labores de trabajo, deportes o, en algunos casos, consumo. -->
-        <h2>Equinos</h2>
-        <ul>
-            <li><strong>Caballos:</strong> Utilizados en actividades agrícolas, laborales, deportivas, y en ciertos
-                contextos para la producción cárnica.</li>
-            <li><strong>Burros:</strong> Empleados tradicionalmente como animales de carga y en labores agrícolas.</li>
-            <li><strong>Mulas:</strong> Híbridos entre burro y yegua, apreciados por su resistencia en labores de
-                trabajo en terrenos difíciles.</li>
-        </ul>
-    </div>
-
-    <!-- Sección de Avícolas -->
-    <div class="section" id="avicolas">
-        <!-- Comentario: La avicultura incluye diversas especies de aves que se crían para la producción de carne y huevos. -->
-        <h2>Avícolas</h2>
-        <ul>
-            <li><strong>Pollos y Gallinas:</strong> Principalmente para la producción de carne y huevos.</li>
-            <li><strong>Pavos:</strong> Criados para carne y, en algunos mercados, para producción de huevos.</li>
-            <li><strong>Patos:</strong> Utilizados para la producción de carne, huesos y plumas.</li>
-            <li><strong>Gansos:</strong> Criados en menor escala, pero en ciertos casos para carne y otras subproductos.
-            </li>
-            <li><strong>Codornices:</strong> Especie de nicho, usada para la producción de huevos y carne.</li>
-        </ul>
-    </div>
-
-    <!-- Sección de Conícolas -->
-    <div class="section" id="conicolas">
-        <!-- Comentario: Los conícolas se refieren a animales criados en sistemas de producción especializados, generalmente para carne y piel. -->
-        <h2>Conícolas</h2>
-        <ul>
-            <li><strong>Conejos:</strong> Criados para la producción de carne y, en algunos casos, para la obtención de
-                piel.</li>
-        </ul>
-    </div>
-
-    <!-- Sección de Otros Animales -->
-    <div class="section" id="otros">
-        <!-- Comentario: Se incluyen especies que tienen una importancia menor a nivel estadístico, pero que son relevantes en ciertos contextos o regiones. -->
-        <h2>Otros Animales</h2>
-        <ul>
-            <li>
-                <strong>Camélidos Menores:</strong>
-                <ul>
-                    <li>
-                        <strong>Alpacas:</strong>
-                        Criadas en zonas de alta montaña para la producción de fibra de alta calidad.
-                    </li>
-                    <li>
-                        <strong>Llamas:</strong>
-                        De uso similar a las alpacas, aunque con una presencia reducida en Colombia.
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <strong>Animales exóticos:</strong>
-                En algunos casos, se introducen especies para nichos específicos o usos experimentales,
-                pero su relevancia estadística es menor en el sector ganadero tradicional.
-            </li>
-        </ul>
-    </div>
-
-    <!-- Comentario final: La página presenta un listado con la clasificación de las principales especies de animales ganaderos en Colombia.
-       Cada sección está explicada mediante comentarios para facilitar la comprensión y el mantenimiento del código. -->
+  <!-- Contenedor para el iframe -->
+  <div class="iframe-container">
+    <!-- Se inserta la URL del visor Power BI en el atributo src del iframe -->
+    <iframe 
+      src="https://app.powerbi.com/view?r=eyJrIjoiNzM5YTM0NjktN2I3OS00NjZjLTkzYTUtZmFjOGVhOGUxMmIxIiwidCI6ImRlZDRiNWFjLTMyNWYtNDIxNC05NDM5LTIyZDk4YzAxYjljOCJ9"
+      width="100%" 
+      height="100%" 
+      frameborder="0" 
+      allowFullScreen="true">
+    </iframe>
+  </div>
 </body>
-
 </html>
